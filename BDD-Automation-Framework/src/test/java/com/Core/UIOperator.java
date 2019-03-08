@@ -4,21 +4,13 @@ import java.io.File;
 import java.io.IOException;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.pdmodel.encryption.InvalidPasswordException;
 import org.apache.pdfbox.text.PDFTextStripper;
-import org.apache.regexp.recompile;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-
-/*
- * @this is basically WebDriver common action methods
- * @this accelerator helps to develop quick automation test development
- */
 
 public class UIOperator {
 
@@ -27,6 +19,13 @@ private WebDriver driver;
 	public UIOperator(WebDriver driver){
 		this.driver = driver;
 	}
+	
+	// method name: JClickElement (JavaScript click)
+	// purpose: use this method where normal webdriver failed to click due to some issue
+	// created: Mar 08, 2019
+	// Author: Sourabh Mondal
+	// Input Required: org.openqa.selenium.By
+	// Return type: boolean
 	
 	public  boolean JClickElement(By locator) throws Exception {
         try {            
@@ -46,6 +45,13 @@ private WebDriver driver;
         }
     }
 	
+	// method name: ClickElement
+	// purpose: use this method to click any web element in web browser
+	// created: Mar 08, 2019
+	// Author: Sourabh Mondal
+	// Input Required: org.openqa.selenium.By
+	// Return type: boolean
+	
 	public  boolean ClickElement(By locator) throws Exception {
         try {
             WebElement element = Framework.driver.findElement(locator);
@@ -59,6 +65,13 @@ private WebDriver driver;
             return false;
         }
     }
+	
+	// method name: EnterText
+	// purpose: use this method when to enter any data into web browser
+	// created: Mar 08, 2019
+	// Author: Sourabh Mondal
+	// Input Required: org.openqa.selenium.By
+	// Return type: boolean
 	
 	public  boolean EnterText(String strValue, By locator) throws Exception {
         try {
@@ -76,6 +89,13 @@ private WebDriver driver;
         }
     }
 	
+	// method name: EnterTextUsingJS
+	// purpose: use this method when webdriver failed to enter data into web browser
+	// created: Mar 08, 2019
+	// Author: Sourabh Mondal
+	// Input Required: org.openqa.selenium.By
+	// Return type: boolean
+	
 	public  boolean EnterTextUsingJS(String strValue, By locator) throws Exception {
 		try {
 			Framework.wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
@@ -92,6 +112,15 @@ private WebDriver driver;
             return false;
 		}
 	}
+	
+	
+	// method name: VerifyControlExist
+	// purpose: use this method to verify whether element exist
+	// created: Mar 08, 2019
+	// Author: Sourabh Mondal
+	// Input Required: org.openqa.selenium.By
+	// Return type: boolean
+	
 	public  boolean VerifyControlExist(By locator) throws Exception {
     	boolean isControlExists = false;
         try {
@@ -113,6 +142,13 @@ private WebDriver driver;
 	        }
         return isControlExists;
     }
+	
+	// method name: VerifyControlExist
+	// purpose: use this method to highlight any web element in web browser, mostly use while giving any demo to client
+	// created: Mar 08, 2019
+	// Author: Sourabh Mondal
+	// Input Required: org.openqa.selenium.By
+	// Return type: boolean
 	
 	public boolean highlightElement(By locator) throws Exception{
 		
@@ -136,6 +172,13 @@ private WebDriver driver;
 		}
 	}
 	
+	// method name: verifyPDFContent
+	// purpose: use this method to verify the content of pdf file
+	// created: Mar 08, 2019
+	// Author: Sourabh Mondal
+	// Input Required: pdf file path & string value to validate
+	// Return type: boolean
+	
 	public boolean verifyPDFContent(String pdfPath, String textToValidate) throws Exception, IOException{
 		
 		File file = new File(pdfPath);
@@ -156,6 +199,14 @@ private WebDriver driver;
 		
 	}
 	
+	
+	// method name: isCheckBoxSelect
+	// purpose: use this method to select or deselect the check box
+	// created: Mar 08, 2019
+	// Author: Sourabh Mondal
+	// Input Required: org.openqa.selenium.By & boolean value
+	// Return type: boolean
+	
 	public boolean isCheckBoxSelect(boolean isCheckBoxSelected, By locator) throws Exception{
 		Framework.wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
 		WebElement element = Framework.driver.findElement(locator);
@@ -174,6 +225,12 @@ private WebDriver driver;
 		Framework.logger.WriteLog( " Checkbox found " + locator ,  true , true);
 		return true;
 	}
+	
+	// method name: waitTillElementDisappear
+	// purpose: use this method to wait web driver until specific text is not disappear (Max wait time 10mins)
+	// created: Mar 08, 2019
+	// Author: Sourabh Mondal
+	// Input Required: text value
 	
 	public void waitTillElementDisappear(String elementText){
 		

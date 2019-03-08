@@ -9,9 +9,10 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-/*
- * @this is the place holder for all cucumber steps definitions
- */
+	//method name: CucumberGlue
+	// purpose: This is basically cucumber steps definition file where all the glue code is generated which include java code
+	// created: Mar 08, 2019
+	// Author: Sourabh Mondal
 
 public class CucumberGlue {
 	

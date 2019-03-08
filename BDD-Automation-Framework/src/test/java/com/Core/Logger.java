@@ -15,10 +15,11 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
-/*
- * @this is logger class
- * @this is responsible to generate test report in Logs folder
- */
+	//method name: Logger
+	// purpose: This is logger class which is responsible to generate customize html report
+	// created: Mar 08, 2019
+	// Author: Sourabh Mondal
+	
 
 public class Logger {
 	public static String strLogPath;
@@ -101,6 +102,12 @@ public class Logger {
 		}
 	}
 
+	// method name: CaptureScreenShot
+	// purpose: use this method for taking screen shot whenever needed
+	// created: Mar 08, 2019
+	// Author: Sourabh Mondal
+	// Return type: html link
+	
 	public String CaptureScreenShot() {
 		
 		DateFormat format = new SimpleDateFormat("dd_MMM_YY");

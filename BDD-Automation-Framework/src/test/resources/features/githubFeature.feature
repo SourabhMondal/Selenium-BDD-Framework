@@ -1,7 +1,7 @@
-Feature: this feature is about github application validation
-  In addition, it will also validate the home page of github
+Feature: this feature is about git verison control applicationn
+  In addition, it will also validate the home page of git-scm
 
-  Scenario Outline: this is a scenario about github
+  Scenario Outline: to verify the git verison control application
     Given user open github application
     Then github home page loaded successfully
     When user click on "<Link1>" - link

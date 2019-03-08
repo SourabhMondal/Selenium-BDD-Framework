@@ -19,11 +19,10 @@ import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
-/*
- * @this is Framework base class.
- * @this class is responsible to launch the web browser based on the properties file
- *  
- */
+	//method name: Framework
+	// purpose: This is framework base class from where entire framework can handle
+	// created: Mar 08, 2019
+	// Author: Sourabh Mondal
 
 
 public class Framework {
