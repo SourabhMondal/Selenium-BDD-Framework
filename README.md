@@ -1,13 +1,13 @@
 # Selenium-BDD-Framework
 
 # [Key Highlight]
--- Easy to adopt from day one
--- Implement TestNG [Unit Testing] Framework to enrich more annotation, dataprovider and parallel execution
--- easy to read custom html report
--- lean CICD ready
+1. Easy to adopt from day one
+2. Implement TestNG [Unit Testing] Framework to enrich more annotation, dataprovider and parallel execution
+3. easy to read custom html report
+4. lean CICD ready
 
 # [Future Enhancement]
--- Automatic defect log in jira
--- Add Performance testing plugin using JMeter
--- Add API [Webservice and Restservice] testing plugin
--- Automatic send out test execution report by email
+1. Automatic defect log in jira
+2. Add Performance testing plugin using JMeter
+3. Add API [Webservice and Restservice] testing plugin
+4. Automatic send out test execution report by email
