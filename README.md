@@ -9,5 +9,5 @@
 # [Future Enhancement]
 1. Automatic defect log in jira
 2. Add Performance testing plugin using JMeter
-3. Add API [Webservice and Restservice] testing plugin
+3. Add API [Soap and Rest webservice using postman] testing plugin
 4. Automatic send out test execution report by email
